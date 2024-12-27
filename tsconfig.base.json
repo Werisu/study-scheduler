@@ -17,7 +17,8 @@
     "paths": {
       "@study-scheduler/cronograma": [
         "modules/data-access/cronograma/src/index.ts"
-      ]
+      ],
+      "@study-scheduler/dashboard": ["modules/feature/dashboard/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
