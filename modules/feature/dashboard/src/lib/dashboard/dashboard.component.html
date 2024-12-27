@@ -1,1 +1,65 @@
-<p>Dashboard works!</p>
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <h1 class="dashboard-title">{{ title }}</h1>
+    <p class="dashboard-welcome">
+      Bem-vindo ao painel do organizador de estudos!
+    </p>
+  </header>
+
+  <section class="cronograma-overview">
+    <h2 class="section-title">Visão Geral do Cronograma</h2>
+
+    <div class="row">
+      <div class="col-6">
+        @for(cronograma of cronogramas; track cronograma; let idx = $index){
+        <div class="cronograma-item">
+          <div class="cronograma-card">
+            <div class="cronograma-info">
+              <h3 class="cronograma-name">{{ cronograma.nome }}</h3>
+              <span class="cronograma-progress"
+                >{{ cronograma.progresso }}%</span
+              >
+            </div>
+
+            <div class="progress-container">
+              <div
+                class="progress-bar bg-{{ cronograma.cor }}"
+                role="progressbar"
+                [style.width]="cronograma.progresso + '%'"
+                [attr.aria-valuenow]="cronograma.progresso"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="col-6">
+        @for(cronograma of cronogramas2; track cronograma; let idx = $index){
+        <div class="cronograma-item">
+          <div class="cronograma-card">
+            <div class="cronograma-info">
+              <h3 class="cronograma-name">{{ cronograma.nome }}</h3>
+              <span class="cronograma-progress"
+                >{{ cronograma.progresso }}%</span
+              >
+            </div>
+
+            <div class="progress-container">
+              <div
+                class="progress-bar bg-{{ cronograma.cor }}"
+                role="progressbar"
+                [style.width]="cronograma.progresso + '%'"
+                [attr.aria-valuenow]="cronograma.progresso"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>
