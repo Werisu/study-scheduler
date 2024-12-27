@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@study-scheduler/calendar": ["modules/ui/calendar/src/index.ts"],
       "@study-scheduler/cronograma": [
         "modules/data-access/cronograma/src/index.ts"
       ],
